@@ -1,6 +1,6 @@
 # StudyBuddy
 
-AI-native study assistant with chat, quizzes, study plans, diagramming, and multimodal document understanding. The project ships a FastAPI backend for RAG + task orchestration and a Vite/React/TypeScript frontend with a polished UI and simple design.
+AI-native study assistant with chat, quizzes, study plans, diagramming, and multimodal document understanding. The project ships a FastAPI backend for RAG + task orchestration and a Vite/React/TypeScript frontend with a polished UI.
 
 ## Highlights
 - Chat with RAG over uploaded study material (Gemini + Azure AI Search).
