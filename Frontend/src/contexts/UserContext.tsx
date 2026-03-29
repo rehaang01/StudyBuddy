@@ -145,16 +145,11 @@ export function UserProvider({ children }: { children: ReactNode }) {
       if (id === currentUser.id) return;
       const found = USER_PROFILES.find((u) => u.id === id);
       if (!found) return;
-      // NOTE: We intentionally do NOT call clearAPICache() here.
-      // Every cache key in the app already includes user_id (e.g.
-      // "/coins?user_id=student-001", "conversations_student-001"),
-      // so there is zero risk of data bleeding between profiles.
-      // Clearing all cache on every switch destroyed offline data
-      // for ALL users whenever anyone switched profiles.
       try { sessionStorage.setItem(SESSION_KEY, id); } catch { /* blocked */ }
       setCurrentUser(found);
     },
-    [currentUser.id]\n  );
+    [currentUser.id]
+  );
 
   const value = useMemo<UserContextValue>(
     () => ({
