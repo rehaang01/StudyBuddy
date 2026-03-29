@@ -163,7 +163,7 @@ async def upload_file(
     # asyncio.gather() runs all embed calls concurrently on a thread pool.
     # Semaphore(5) caps concurrent calls to avoid Gemini rate limits.
     try:
-        semaphore = asyncio.Semaphore(5)
+        semaphore = asyncio.Semaphore(10)
         async def embed_one(c):
             async with semaphore:
                 return await asyncio.get_event_loop().run_in_executor(None, lambda: embed_text(c))
