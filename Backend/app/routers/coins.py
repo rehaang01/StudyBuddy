@@ -26,7 +26,7 @@ from app.services.coins_service import (
 router = APIRouter(prefix="/coins", tags=["Coins"])
 
 
-@router.get("/", response_model=CoinStateResponse)
+@router.get("", response_model=CoinStateResponse)
 async def get_coins(user_id: str = Query(...)):
     try:
         return await get_coin_state(user_id)
