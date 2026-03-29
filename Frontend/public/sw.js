@@ -128,10 +128,13 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       caches.match(request).then((cached) => {
         if (cached) return cached;
-        return fetch(request)
+        return fetch(request, { mode: "cors", credentials: "omit" })
           .then(async (response) => {
-            await cacheResponse(IMAGE_CACHE, request, response);
-            await trimImageCache();
+            if (response && (response.ok || response.type === "opaque")) {
+              const cache = await caches.open(IMAGE_CACHE);
+              await cache.put(request, response.clone());
+              await trimImageCache();
+            }
             return response;
           })
           .catch(() => new Response("Offline — image not cached", { status: 503 }));
