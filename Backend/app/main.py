@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 
 load_dotenv()
 
-app = FastAPI(title="StudyBuddy API", version="1.0")
+app = FastAPI(title="StudyBuddy API", version="1.0", redirect_slashes=False)
 
 # Read frontend URL from .env (optional)
 frontend_url = os.getenv("FRONTEND_URL", "").strip()
