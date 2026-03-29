@@ -978,7 +978,7 @@ async def chat_message(request: ChatRequest):
 
                 create_index_if_not_exists()
 
-                embed_semaphore = asyncio.Semaphore(5)  # shared across ALL files
+                embed_semaphore = asyncio.Semaphore(10)  # shared across ALL files
 
                 async def ingest_one_file(ingest_url: str, ingest_filename: str):
                     pages = await loop.run_in_executor(None, lambda u=ingest_url: extract_pages_from_url(u))
