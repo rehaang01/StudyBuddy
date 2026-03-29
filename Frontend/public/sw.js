@@ -128,12 +128,16 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       caches.match(request).then((cached) => {
         if (cached) return cached;
-        return fetch(request, { mode: "cors", credentials: "omit" })
+        return fetch(request)
           .then(async (response) => {
             if (response && (response.ok || response.type === "opaque")) {
-              const cache = await caches.open(IMAGE_CACHE);
-              await cache.put(request, response.clone());
-              await trimImageCache();
+              try {
+                const cache = await caches.open(IMAGE_CACHE);
+                await cache.put(request, response.clone());
+                await trimImageCache();
+              } catch {
+                // Opaque responses may be too large — skip caching silently
+              }
             }
             return response;
           })
