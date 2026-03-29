@@ -52,14 +52,14 @@ export interface StoreItem {
 }
 
 export const STORE_ITEMS: StoreItem[] = [
-  { id: "extra_upload", name: "Extra Upload Slot", description: "Upload one additional document beyond the 5-file limit", cost: 60, category: "boost", iconKey: "file-plus", gradient: "from-primary/15 to-blue-500/15" },
-  { id: "ai_deep_dive", name: "AI Deep Dive", description: "Unlock extended AI analysis with extra-long context for one session", cost: 75, category: "boost", iconKey: "brain", gradient: "from-violet-500/15 to-purple-500/15" },
-  { id: "quiz_master", name: "Quiz Master Pack", description: "Generate up to 25 questions per quiz instead of the default 10", cost: 50, category: "boost", iconKey: "clipboard-list", gradient: "from-cyan-500/15 to-blue-500/15" },
-  { id: "theme_midnight", name: "Midnight Scholar Theme", description: "Exclusive deep purple accent theme for your StudyBuddy interface", cost: 100, category: "cosmetic", iconKey: "moon", gradient: "from-indigo-500/15 to-violet-500/15" },
-  { id: "theme_forest", name: "Forest Focus Theme", description: "Calming forest green accent theme for distraction-free study", cost: 100, category: "cosmetic", iconKey: "tree-pine", gradient: "from-emerald-500/15 to-green-500/15" },
-  { id: "badge_scholar", name: "Scholar Badge", description: "Display an exclusive Scholar badge on your profile", cost: 150, category: "cosmetic", iconKey: "graduation-cap", gradient: "from-primary/15 to-sky-500/15", limited: true },
-  { id: "tts_pack", name: "Extended TTS Pack", description: "Unlock 3 additional premium voice styles for text-to-speech", cost: 80, category: "boost", iconKey: "volume-2", gradient: "from-teal-500/15 to-cyan-500/15" },
-  { id: "study_streak_shield", name: "Streak Shield", description: "Protect your study streak — miss one day without breaking it", cost: 40, category: "boost", iconKey: "shield", gradient: "from-primary/15 to-indigo-500/15", limited: true },
+  { id: "extra_upload", name: "Extra Upload Slot", description: "Upload one additional document beyond the 5-file limit", cost: 180, category: "boost", iconKey: "file-plus", gradient: "from-primary/15 to-blue-500/15" },
+  { id: "ai_deep_dive", name: "AI Deep Dive", description: "Unlock extended AI analysis with extra-long context for one session", cost: 250, category: "boost", iconKey: "brain", gradient: "from-violet-500/15 to-purple-500/15" },
+  { id: "quiz_master", name: "Quiz Master Pack", description: "Generate up to 25 questions per quiz instead of the default 10", cost: 150, category: "boost", iconKey: "clipboard-list", gradient: "from-cyan-500/15 to-blue-500/15" },
+  { id: "theme_midnight", name: "Midnight Scholar Theme", description: "Exclusive deep purple accent theme for your StudyBuddy interface", cost: 300, category: "cosmetic", iconKey: "moon", gradient: "from-indigo-500/15 to-violet-500/15" },
+  { id: "theme_forest", name: "Forest Focus Theme", description: "Calming forest green accent theme for distraction-free study", cost: 300, category: "cosmetic", iconKey: "tree-pine", gradient: "from-emerald-500/15 to-green-500/15" },
+  { id: "badge_scholar", name: "Scholar Badge", description: "Display an exclusive Scholar badge on your profile", cost: 450, category: "cosmetic", iconKey: "graduation-cap", gradient: "from-primary/15 to-sky-500/15", limited: true },
+  { id: "tts_pack", name: "Extended TTS Pack", description: "Unlock 3 additional premium voice styles for text-to-speech", cost: 280, category: "boost", iconKey: "volume-2", gradient: "from-teal-500/15 to-cyan-500/15" },
+  { id: "study_streak_shield", name: "Streak Shield", description: "Protect your study streak — miss one day without breaking it", cost: 140, category: "boost", iconKey: "shield", gradient: "from-primary/15 to-indigo-500/15", limited: true },
 ];
 
 // ── Earn Missions (no achievements, no graph equation, no 7-day streak) ────
